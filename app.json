@@ -1,0 +1,67 @@
+{
+	"expo": {
+		"name": "TraveloggiaRN",
+		"slug": "ExpoSDK42",
+		"version": "1.4.2",
+		"orientation": "portrait",
+		"icon": "./assets/blackpearl.png",
+		"description": "functional, no calendar, minimal styles, legacy photos",
+		
+		"splash": {
+			"image": "./assets/blackpearl.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#ffffff"
+		},
+		"updates": {
+			"fallbackToCacheTimeout": 0
+		},
+		"assetBundlePatterns": [
+			"**/*"
+		],
+		"ios": {
+			"supportsTablet": true,
+			"bundleIdentifier": "traveloggia.pro.reactnative.ios",
+			"infoPlist": {
+				"NSLocationWhenInUseUsageDescription": "The app enables saving current location to display on a map and store in db, and to reverse geocode and save and display an address",
+				"NSLocationAlwaysAndWhenInUseUsageDescription": "The app enables saving current location to display on a map and store in db, and to reverse geocode and save and display an address",
+				"PNSCameraUsageDescription": "The app enables taking a photo and immediately uploading it to be associated with a specific locaiton",
+				"NSPhotoLibraryUsageDescription": "The app allows you to select existing photos to upload and store to be referenced by selecting the photos location",
+				"PNSCalendarsUsageDescription": "The app allows read and write to the calendar, to associate locations with a specific date, and time period",
+				"NSRemindersUsageDescription": "The app allows read and write to the calendar, to associate locations with a specific date, and time period"
+			}
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/adaptive-icon.png",
+				"backgroundColor": "#FFFFFF"
+			},
+			"permissions": [
+				"ACCESS_COARSE_LOCATION",
+				"ACCESS_FINE_LOCATION",
+				"CAMERA",
+				"LOCATION",
+				"LOCATION_FOREGROUND",
+				"WRITE_CALENDER",
+				"READ_CALENDAR",
+				"READ_EXTERNAL-STORAGE",
+				"WRITE_EXTERNAL_STORAGE"
+			]
+		},
+		"web": {
+			"favicon": "./assets/favicon.png"
+		},
+		"extra": {
+			"bugsnag": {
+				"apiKey": "d2c6f165cad1e3adb86d4576bdec5b37"
+			}
+		},
+		"hooks": {
+			"postPublish": [
+				{
+					"file": "@bugsnag/expo/hooks/post-publish.js",
+					"config": {}
+				}
+			]
+		}
+	}
+}
